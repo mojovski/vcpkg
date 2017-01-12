@@ -1,14 +1,16 @@
 #tool
 include(vcpkg_common_functions)
 vcpkg_download_distfile(ARCHIVE_FILE
-    URLS "https://github.com/google/protobuf/releases/download/v3.0.2/protobuf-cpp-3.0.2.tar.gz"
-    FILENAME "protobuf-cpp-3.0.2.tar.gz"
-    SHA512 5c99fa5d20815f9333a1e30d4da7621375e179abab6e4369ef0827b6ea6a679afbfec445dda21a72b4ab11e1bdd72c0f17a4e86b153ea8e2d3298dc3bcfcd643
+    #URLS "https://github.com/google/protobuf/releases/download/v3.0.2/protobuf-cpp-3.0.2.tar.gz"
+    URLS "https://github.com/google/protobuf/releases/download/v3.1.0/protobuf-cpp-3.1.0.tar.gz"
+	FILENAME "protobuf-cpp-3.1.0.tar.gz"
+    SHA512 9f85a98e55cbc9f245a3079d5a597f778454bc945f0942cb10fbdfbde5fe12b17d6dda93d6a8d5281459ad30a3840be7e0712feb33a824226884e7e4da54a061
 )
 vcpkg_download_distfile(TOOL_ARCHIVE_FILE
-    URLS "https://github.com/google/protobuf/releases/download/v3.0.2/protoc-3.0.2-win32.zip"
-    FILENAME "protoc-3.0.2-win32.zip"
-    SHA512 51c67bd8bdc35810da70786d873935814679c58b74e653923671bdf06b8b69a1c9a0793d090b17d25e91ddafff1726bcfcdd243373dd47c4aeb9ea83fbabaeb0
+    #URLS "https://github.com/google/protobuf/releases/download/v3.0.2/protoc-3.0.2-win32.zip"
+	URLS "https://github.com/google/protobuf/releases/download/v3.1.0/protoc-3.1.0-win32.zip"
+    FILENAME "protoc-3.1.0-win32.zip"
+    SHA512 f46ebe162b9dacefd622a6b9de367f10e51347439a4f9d069dcd57e45e4ae4572ff765043537820f8be32cdc75e346e0769f8a0012777d2c33f870507b6618b1
 )
 vcpkg_extract_source_archive(${ARCHIVE_FILE})
 vcpkg_extract_source_archive(${TOOL_ARCHIVE_FILE} ${CURRENT_BUILDTREES_DIR}/src/protobuf-3.0.2-win32)
